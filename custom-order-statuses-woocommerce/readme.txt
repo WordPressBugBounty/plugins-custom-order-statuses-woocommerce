@@ -3,7 +3,7 @@ Contributors: tychesoftwares
 Tags: woocommerce, order status, woo commerce, custom status
 Requires at least: 4.4
 Tested up to: 6.6.2
-Stable tag: 2.4.1
+Stable tag: 2.5.0
 Requires PHP: 7.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -99,6 +99,9 @@ This plugin lets you create, edit and delete [custom order statuses](https://www
 8. Add New Custom Status.
 
 == Changelog ==
+= 2.5.0 - 22/10/2024 =
+* Fix - Deactivation survey request was being sent even though 'Skip & deactivate' was selected while deactivating the plugin.
+* Fix - Compatibility issue with "ActiveMember360" plugin causing fatal error on frontend.
 
 = 2.4.1 - 03/04/2024 =
 * Fix - Cross Site Request Forgery (CSRF) vulnerability.
