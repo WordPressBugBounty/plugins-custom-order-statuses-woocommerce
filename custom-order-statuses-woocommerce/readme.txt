@@ -2,8 +2,8 @@
 Contributors: tychesoftwares
 Tags: woocommerce, order status, woo commerce, custom status
 Requires at least: 4.4
-Tested up to: 6.6.2
-Stable tag: 2.5.0
+Tested up to: 6.7.1
+Stable tag: 2.6.0
 Requires PHP: 7.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -98,7 +98,15 @@ This plugin lets you create, edit and delete [custom order statuses](https://www
 7. Bulk Status Change.
 8. Add New Custom Status.
 
+== External Services ==
+
+This plugin communicates with our tracking server to send usage data **only** if the user has explicitly opted in to usage tracking. For detailed information about what is tracked, please refer to our [usage tracking documentation](https://www.tychesoftwares.com/docs/docs/custom-order-status-for-woocommerce/custom-order-status-usage-tracking/).
+
 == Changelog ==
+= 2.6.0 - 22/11/2024 =
+* Fix - Translation loading was triggered too early, causing errors when changing the site language in WordPress 6.7.
+* Tweak - Removed the call to our tracking server to fetch the deactivation reasons and added them in the plugin itself.
+
 = 2.5.0 - 22/10/2024 =
 * Fix - Deactivation survey request was being sent even though 'Skip & deactivate' was selected while deactivating the plugin.
 * Fix - Compatibility issue with "ActiveMember360" plugin causing fatal error on frontend.
