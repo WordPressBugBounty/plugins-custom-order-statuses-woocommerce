@@ -212,7 +212,6 @@ if ( ! class_exists( 'Alg_WC_Custom_Post_Type_For_Order_Statuses' ) ) {
 				}
 				update_option( 'is_statuses_migrated_to_slug', 'yes' );
 			}
-
 		}
 
 		/**
@@ -295,7 +294,6 @@ if ( ! class_exists( 'Alg_WC_Custom_Post_Type_For_Order_Statuses' ) ) {
 			);
 
 			register_post_type( 'custom_order_status', $args );
-
 		}
 
 		/**
@@ -527,7 +525,7 @@ if ( ! class_exists( 'Alg_WC_Custom_Post_Type_For_Order_Statuses' ) ) {
 		 *
 		 * @param array $columns Array of the columns in the CPT table.
 		 */
-		public static function alg_custom_post_type_columns( $columns ) {
+		public static function alg_custom_post_type_columns( $columns ) { // phpcs:ignore
 			return array(
 				'cb'         => '<input type="checkbox" />',
 				'title'      => __( 'Title', 'custom-order-statuses-woocommerce' ),
@@ -590,7 +588,7 @@ if ( ! class_exists( 'Alg_WC_Custom_Post_Type_For_Order_Statuses' ) ) {
 				// Delete icon data.
 				$result_icon_data = delete_option( 'alg_orders_custom_status_icon_data_' . substr( $delete_status, 3 ) );
 				// Result message.
-				if ( true === $result && true === $result_icon_data ) {
+				if ( true === $result_icon_data ) {
 					$result_message = __( 'Status has been successfully deleted.', 'custom-order-statuses-woocommerce' );
 					if ( $total_orders_changed > 0 ) {
 						// translators: number of orders for which status has been changed.
@@ -633,7 +631,7 @@ if ( ! class_exists( 'Alg_WC_Custom_Post_Type_For_Order_Statuses' ) ) {
 				foreach ( $loop_orders as $order_id ) {
 					$order = wc_get_order( $order_id );
 					$order->update_status( $new_status_without_wc_prefix );
-					$total_orders_changed++;
+					++$total_orders_changed;
 				}
 				$offset += $block_size;
 			}
