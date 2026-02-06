@@ -182,14 +182,12 @@ if ( ! class_exists( 'Alg_WC_Custom_Order_Statuses_Settings_General' ) ) :
 					'custom_attributes' => apply_filters( 'alg_orders_custom_statuses', array( 'disabled' => 'disabled' ), 'settings' ),
 				),
 				array(
-					'title'             => __( 'Make custom status orders editable', 'custom-order-statuses-woocommerce' ),
-					'desc'              => __( 'Enable', 'custom-order-statuses-woocommerce' ),
-					'id'                => 'alg_orders_custom_statuses_enable_editable',
-					'default'           => 'no',
-					'type'              => 'checkbox',
-					// translators: Link to the Pro version.
-					'desc_tip'          => apply_filters( 'alg_orders_custom_statuses', sprintf( __( 'Get <a href="%s" target="_blank">Custom Order Status for WooCommerce Pro</a> to enable this option.', 'custom-order-statuses-woocommerce' ), 'https://www.tychesoftwares.com/store/premium-plugins/custom-order-status-woocommerce/?utm_source=cosupgradetopro&utm_medium=link&utm_campaign=CustomOrderStatusLite' ), 'settings' ),
-					'custom_attributes' => apply_filters( 'alg_orders_custom_statuses', array( 'disabled' => 'disabled' ), 'settings' ),
+					'title'    => __( 'Make custom status orders editable', 'custom-order-statuses-woocommerce' ),
+					'desc'     => __( 'Enable', 'custom-order-statuses-woocommerce' ),
+					'id'       => 'alg_orders_custom_statuses_enable_editable',
+					'default'  => 'no',
+					'type'     => 'checkbox',
+					'desc_tip' =>  __( 'Allows editing orders that have custom order statuses.', 'custom-order-statuses-woocommerce' ),
 				),
 				array(
 					'title'             => __( 'Make custom status orders paid', 'custom-order-statuses-woocommerce' ),
@@ -198,10 +196,7 @@ if ( ! class_exists( 'Alg_WC_Custom_Order_Statuses_Settings_General' ) ) :
 					'default'           => 'no',
 					'type'              => 'checkbox',
 					// translators: List of WC statuses which are paid.
-					'desc_tip'          => sprintf( __( 'By default paid statuses are: %s.', 'custom-order-statuses-woocommerce' ), '<code>processing</code>, <code>completed</code>' ) .
-					// translators: Link to the Pro version.
-						apply_filters( 'alg_orders_custom_statuses', sprintf( '<br>' . __( 'Get <a href="%s" target="_blank">Custom Order Status for WooCommerce Pro</a> to enable this option.', 'custom-order-statuses-woocommerce' ), 'https://www.tychesoftwares.com/store/premium-plugins/custom-order-status-woocommerce/?utm_source=cosupgradetopro&utm_medium=link&utm_campaign=CustomOrderStatusLite' ), 'settings' ),
-					'custom_attributes' => apply_filters( 'alg_orders_custom_statuses', array( 'disabled' => 'disabled' ), 'settings' ),
+					'desc_tip'          => sprintf( __( 'By default paid statuses are: %s.', 'custom-order-statuses-woocommerce' ), '<code>processing</code>, <code>completed</code>' ),
 				),
 				array(
 					'type' => 'sectionend',
